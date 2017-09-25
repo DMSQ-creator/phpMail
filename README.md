@@ -2,6 +2,8 @@
 ## 欢迎来到phpMail wiki！
 此程序测试完成ssl加密发邮件、
 
+## 测试环境xampp Apache
+
 ## 相关问题总结：
 
 *  XAMPP 开启 SSL （https）
