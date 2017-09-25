@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>留言反馈</title>
+<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
+<script type="text/javascript">
+function G(id){
+   return document.getElementById(id);	
+}
+function ck(){
+   if(G('yourname').value == ''){
+	alert("姓名不能为空！");
+	G('yourname').focus();
+	return false;
+   }
+   if(G('message').value == ''){
+	alert("内容不能为空！");
+	G('message').focus();
+	return false;
+   }
+}
+</script>
+<style>
+.form-group { margin-bottom: 15px; }
+
+#content { margin:0 auto; }
+
+input { height: 40px; padding-left: 20px; border: 1px solid #ccc; border-radius: 0; box-shadow: none; line-height: 22px; letter-spacing: .5px; -webkit-transition: border-color 0.5s; transition: border-color 0.5s; }
+
+textarea { border: 1px solid #ccc; border-radius: 0; box-shadow: none; line-height: 22px; letter-spacing: .5px; -webkit-transition: border-color 0.5s; transition: border-color 0.5s; }
+</style>
+</head>
+<body>
+<div id="content">
+  <div class="main">
+    <form action="i.php" method="post" onsubmit="return ck();">
+      <div class="form-group">
+        <input type="text" maxlength="40" size="26" placeholder="姓名或昵称" id="yourname" name="yourname" />
+        <font color="red">*</font> <span class="tip"></span></div>
+      <div class="form-group">
+        <input type="text" maxlength="40" size="26" placeholder="您的Email地址（建议填写）" id="email" name="email" />
+        <span class="tip"></span></div>
+      <div class="form-group">
+        <input type="text" maxlength="40" size="26" placeholder="您的QQ号码" id="qq" name="qq" />
+        <span class="tip"></span></div>
+      <div class="form-group">
+        <input type="text" maxlength="15" size="26" placeholder="电话或手机号" id="tel" name="tel" />
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="请详细描述你需要的产品" id="message" cols="60" rows="7"></textarea>
+        <font color="red">*</font></div>
+      <!--<div class="g-recaptcha form-group" data-sitekey="xxxxxxxxxxxxxx"></div>-->
+      <div class="form-group">
+        <input name="add" type="hidden" value="1" />
+        <input type="submit" value="提 交" />
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
