@@ -45,7 +45,7 @@ $mail->Username = $youremail;
 $mail->Password = $password; //必填， 以上邮箱对应的密码
 
 $mail->From = $youremail; 
-$mail->FromName = "询盘系统"; 
+$mail->FromName = "xxxxxx系统"; 
 
 $mail->AddAddress($ymail,$yname);
 
