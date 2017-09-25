@@ -2,6 +2,8 @@
 ## 欢迎来到phpMail wiki！
 此程序测试完成ssl加密发邮件、
 
+需要自行配置i.php
+
 ## 测试环境xampp Apache
 
 ## 相关问题总结：
